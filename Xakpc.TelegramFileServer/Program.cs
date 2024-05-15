@@ -19,7 +19,11 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(s =>
+{
+    s.SwaggerEndpoint("/swagger/v1/swagger.json", "Telegram File Server API");
+    s.RoutePrefix = "";
+});
 
 app.UseHttpsRedirection();
 

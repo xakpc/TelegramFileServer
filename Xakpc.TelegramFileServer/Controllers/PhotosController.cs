@@ -40,9 +40,7 @@ public class PhotosController : ControllerBase
         botToken ??= botTokenQuery;
         
         if (botToken == null)
-        {
             return BadRequest("Bot token is required.");
-        }
 
         var imageUrl = await _storageService.GetImageUrlAsync(
             new TelegramCredentials(botToken, default), fileId);
