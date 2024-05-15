@@ -17,7 +17,7 @@
 
 Telegram Cloud apparently could provide unlimited storage.
 
-This Proof of Concept is a simple REST-based file server that uses Telegram Cloud as storage.
+This Proof of Concept is a simple REST-based file server that uses Telegram Bot (and maybe Cloud) as storage.
 
 ## How to use
 
@@ -25,7 +25,7 @@ This Proof of Concept is a simple REST-based file server that uses Telegram Clou
 1. Initialize the bot by sending `/start` to the bot.			
 1. Mute the bot to avoid spamming.							
 1. Obtain chat id - one of the ways is to use the following third-party bot [@RawDataBot](https://t.me/RawDataBot)		
-1. Run the app and use chat id and token as headers to upload file.
+1. Call the API and use chat id and token as headers to upload file.
 
 ## Deployment
 
