@@ -34,8 +34,16 @@ public class PhotosController : ControllerBase
 
     [HttpGet("{fileId}")]
     public async Task<IActionResult> DownloadImage(string fileId, 
-        [FromHeader(Name = "Bot-Token")] string botToken)
+        [FromHeader(Name = "Bot-Token")] string? botToken,
+        [FromQuery(Name = "botToken")] string? botTokenQuery)
     {
+        botToken ??= botTokenQuery;
+        
+        if (botToken == null)
+        {
+            return BadRequest("Bot token is required.");
+        }
+
         var imageUrl = await _storageService.GetImageUrlAsync(
             new TelegramCredentials(botToken, default), fileId);
 

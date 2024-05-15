@@ -328,4 +328,5 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-src/Xakpc.OpenPost/Stylesheets/vendors/picocss
+
+Xakpc.TelegramFileServer/Properties/ServiceDependencies/
